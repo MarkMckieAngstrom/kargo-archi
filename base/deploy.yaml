@@ -23,8 +23,6 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
-        securityContext:
-          runAsUser: 1000
         resources:
           limits:
             memory: 128M
