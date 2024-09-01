@@ -3,7 +3,6 @@ kind: Kustomization
 
 resources:
 - ../../base
-- configmap.yaml
 images:
 - name: 373797717611.dkr.ecr.eu-west-2.amazonaws.com/architecture/archi-website
   newTag: 2.0.0
