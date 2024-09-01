@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: archi-website
+  labels:
+    app: archi-website
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: archi-website
+  template:
+    metadata:
+      labels:
+        app: archi-website
+    spec:
+      nodeSelector:
+        kubernetes.io/arch: amd64
+      serviceAccountName: archi-website
+      containers:
+      - name: archi-website 
+        image: 373797717611.dkr.ecr.eu-west-2.amazonaws.com/architecture/archi-website:0.0.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            memory: 128M
+          requests:
+            cpu: 100m
+            memory: 128M
