@@ -1,3 +1,5 @@
 serviceAccount:
   annotations:
     eks.amazonaws.com/role-arn: arn:aws:iam::373797717611:role/eks-arch-01-message-constructor-sa
+livenessProbe: {}
+readinessProbe: {}
