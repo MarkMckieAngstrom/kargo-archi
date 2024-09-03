@@ -3,3 +3,5 @@ serviceAccount:
     eks.amazonaws.com/role-arn: arn:aws:iam::373797717611:role/eks-arch-01-message-constructor-sa
 livenessProbe: null
 readinessProbe: null
+nodeSelector:
+  kubernetes.io/arch: amd64
